@@ -102,6 +102,10 @@ inputs:
     description: 'Skip maven release perform'
     required: false
     default: false
+  skip-bot-release-check:
+    description: 'Skip check if bot has pushed the last commit [WARNING can cause release loop if true and unmanaged]'
+    required: false
+    default: false
 
   version-major:
     description: 'Increment the major version number'
@@ -163,6 +167,7 @@ runs:
     SKIP_GIT_SANITY_CHECK: ${{ inputs.git-skip-sanity-check }}
 
     SKIP_PERFORM: ${{ inputs.skip-perform }}
+    SKIP_BOT_RELEASE_CHECK: ${{ inputs.skip-bot-release-check }}
 
     GITREPO_ACCESS_TOKEN: ${{ inputs.access-token }}
 
