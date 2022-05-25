@@ -107,18 +107,15 @@ inputs:
     required: false
     default: false
 
-  version-major:
-    description: 'Increment the major version number'
+  version-increment:
+    description: 'Define version to increment'
     required: false
-    default: false
-  version-minor:
-    description: 'Increment the minor version number'
-    required: false
-    default: false
-  version-patch:
-    description: 'Increment the patch version number <- By default, we will increase the patch version'
-    required: false
-    default: false
+    default: 'patch'
+    type: choice
+    options:
+      - 'major'
+      - 'minor'
+      - 'patch'
 
   m2-home-folder:
     description: 'M2 home folder'

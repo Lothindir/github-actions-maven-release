@@ -5,6 +5,4 @@ export CI_COMMIT_REF_NAME="${GITHUB_REF}"
 
 git config --global --add safe.directory /github/workspace
 
-echo $SSH_PRIVATE_KEY
-
 release.sh
